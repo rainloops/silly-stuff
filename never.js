@@ -53,3 +53,17 @@ input.addEventListener("input", () => {
     // once the typed text genuinely needs more room than that.
     input.style.width = Math.max(minWidth, typedWidth) + "px";
 });
+
+
+document.getElementById("ok"),onclick = function() {
+    if (document.getElementById("typing").value = "password") {
+    console.log("correct password");
+    
+} else {
+    console.log("wrong password ,try again");
+}
+};
+
+
+
+
