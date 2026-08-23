@@ -1,18 +1,10 @@
-
+/* 
 @font-face {
     font-family: "MyFont" ;
     src: url("fonts/Myfooont.ttf")
     format("truetype"); 
 }
 /*
-body {
-    background-color: rgba(207, 215, 223, 0.943);
-    font-family: "MyFont";
-    margin: 0;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
-} */
 
 * {
     font-family: inherit;
@@ -59,8 +51,61 @@ button{
 
 #mySpan {
     visibility: hidden;   /* invisible to the eye, but still takes up layout space */
-    position: absolute;   /* takes sit out of normal document flow, so it doesn't push your other elements around or leave a visible gap */
-    white-space: pre;     /* prevents the text from wrapping to a new line, so width is measured accurately as one line */
-
-    font-size: 50px;
+   
+@font-face {
+    font-family: "MyFont";
+    src: url("fonts/Myfooont.ttf")
+    format("truetype");
 }
+
+* {
+    font-family: inherit;
+    font-size: 22px;
+}
+
+body {
+    background-color: rgba(207, 215, 223, 0.943);
+    font-family: "MyFont";
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    width: fit-content;
+    height: auto;
+    padding: 15px 20px;
+    font-size: 35px;
+    border: 3px solid black;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: rgb(53, 129, 216);
+    font-size: 40px;
+    padding: 20px 25px;
+    width: fit-content;
+    border: 3px solid black;
+    border-radius: 12px;
+    outline: none;
+}
+
+#mySpan {
+    visibility: hidden;    /* invisible to the eye, but still takes up layout space so we can measure it */
+    position: absolute;    /* removed from normal document flow, so it doesn't push other elements around or leave a visible gap */
+    white-space: pre;      /* prevents text from wrapping to a new line, so width is measured accurately as one line */
+    /* font-size is intentionally NOT hardcoded here anymore — 
+       our JavaScript now sets it dynamically to match input's real font-size */
+}
+
+
+
