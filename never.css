@@ -106,6 +106,20 @@ button {
     /* font-size is intentionally NOT hardcoded here anymore — 
        our JavaScript now sets it dynamically to match input's real font-size */
 }
+/*for the error/success message now :*/
 
+#message {
+    visibility: hidden;   /* starts invisible, but still reserves its space in the layout */
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.error-text {
+    color: red;
+}
+
+.success-text {
+    color: green;
+}
 
 
