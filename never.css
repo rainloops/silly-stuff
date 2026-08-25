@@ -64,7 +64,7 @@ button{
 }
 
 body {
-    background-color: rgba(207, 215, 223, 0.943);
+    background-color: rgba(183, 211, 239, 0.943);
     font-family: "MyFont";
     margin: 0;
     min-height: 100vh;
@@ -103,8 +103,7 @@ button {
     visibility: hidden;    /* invisible to the eye, but still takes up layout space so we can measure it */
     position: absolute;    /* removed from normal document flow, so it doesn't push other elements around or leave a visible gap */
     white-space: pre;      /* prevents text from wrapping to a new line, so width is measured accurately as one line */
-    /* font-size is intentionally NOT hardcoded here anymore — 
-       our JavaScript now sets it dynamically to match input's real font-size */
+    
 }
 /*for the error/success message now :*/
 
@@ -120,6 +119,10 @@ button {
 
 .success-text {
     color: green;
+}
+P {
+    max-width: 300px;
+    text-align: center;
 }
 
 
